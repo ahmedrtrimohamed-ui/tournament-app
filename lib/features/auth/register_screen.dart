@@ -159,7 +159,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
       return;
     }
 
-    await ref.read(authProvider.notifier).register(username, email, password);
+    Navigator.of(context).pushReplacementNamed("/home"); // (username, email, password);
   }
 
   void _showSnackBar(String message, Color backgroundColor) {
